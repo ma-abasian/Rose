@@ -1,0 +1,109 @@
+// /*==============================================  css Reset ==============================================*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #012B55;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: bolder;
+}
+
+/*_ mixed-in for ( display=flex;)_*/
+@mixin flex {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -moz-flex;
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+}
+
+/*_ mixed-in for ( display=flex; - up to down = center , right to left = center )_*/
+@mixin flex-center-center {
+  @include flex;
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+/*_ mixed-in for ( display=flex; - up to down = center , right to left = space-between )_*/
+@mixin flex-center-between {
+  @include flex;
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+
+@mixin justify-content($value: flex-start) {
+  @if $value==flex-start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $value==flex-end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $value==space-between {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if $value==space-around {
+    -ms-flex-pack: distribute;
+  } @else {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+
+@mixin align-items($value: stretch) {
+  @if $value==flex-start {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+  } @else if $value==flex-end {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $value;
+    -moz-box-align: $value;
+    -ms-flex-align: $value;
+  }
+
+  -webkit-align-items: $value;
+  -moz-box-align: $value;
+  -ms-flex-align: $value;
+  align-items: $value;
+}
+
+/*============================ [ breakpoints for responsive in sass ] ==================================*/
+
+$tab: "(min-width: 600px)";
+
+$desktop: "(min-width: 900px)";

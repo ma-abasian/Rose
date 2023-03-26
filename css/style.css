@@ -1,0 +1,323 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #012B55;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: bolder;
+}
+
+/*_ mixed-in for ( display=flex;)_*/
+/*_ mixed-in for ( display=flex; - up to down = center , right to left = center )_*/
+/*_ mixed-in for ( display=flex; - up to down = center , right to left = space-between )_*/
+/*============================ [ breakpoints for responsive in sass ] ==================================*/
+.container {
+  width: 100%;
+}
+
+/*===========================  navbar menu ===========================*/
+.navbar .nav-head {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -moz-flex;
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 40px 25px;
+}
+.navbar .nav-head h2 {
+  font-size: 2.2rem;
+  text-align: left;
+}
+.navbar .nav-head .fa-solid {
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+.navbar .nav-container {
+  display: none;
+}
+.navbar .nav-container .menu-item {
+  font-size: 1.6rem;
+  padding-bottom: 15px;
+}
+.navbar .nav-container .menu-item .link {
+  color: rgb(65, 87, 109);
+  transition: 0.25s ease;
+}
+.navbar .nav-container .menu-item .link:hover {
+  color: #012B55;
+}
+.navbar .nav-container .title {
+  font-size: 1.6rem;
+  padding-bottom: 15px;
+}
+
+/*===========================  header ===========================*/
+.head {
+  padding: 45px 45px;
+  background-color: #F7F8F9;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 3px;
+}
+.head .head-bottom-text {
+  color: #597188;
+  margin: 40px 0 20px 0;
+}
+
+/*===========================  projects ===========================*/
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects .project-item {
+  padding: 3px 0;
+}
+.projects .project-item .project-link {
+  position: relative;
+}
+.projects .project-item .project-link .image-container {
+  height: 100%;
+}
+.projects .project-item .project-link .image-container .project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects .project-item .project-link .detail {
+  opacity: 0;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -moz-flex;
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 43, 85, 0.85);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.2s ease;
+}
+.projects .project-item .project-link .detail .date, .projects .project-item .project-link .detail .title {
+  color: #fff;
+  line-height: 40px;
+}
+.projects .project-item .project-link:hover .detail {
+  opacity: 1;
+}
+
+/*===========================  footer ===========================*/
+.footer {
+  padding: 28px 18px;
+}
+.footer .footer-text {
+  text-align: center;
+  font-size: 1.6rem;
+  color: rgb(89, 113, 136);
+}
+.footer .footer-text a {
+  color: rgb(89, 113, 136);
+}
+
+/*===========================  icons ===========================*/
+.icons {
+  margin-top: 10px;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -moz-flex;
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.icons .icon {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -moz-flex;
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 4px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(1, 43, 85, 0.1);
+  border-radius: 50%;
+  margin-right: 12px;
+  transition: 0.25s ease;
+}
+.icons .icon .icon-svg {
+  fill: rgb(1, 43, 85);
+}
+.icons .icon:hover {
+  background-color: rgba(1, 43, 85, 0.2);
+}
+
+/*===========================  top button ===========================*/
+.top-button {
+  position: fixed;
+  display: block;
+  height: 50px;
+  width: 50px;
+  bottom: 40px;
+  right: 40px;
+  background: rgba(1, 43, 85, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.top-button a {
+  padding: 15px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.25s ease;
+}
+.top-button a:hover {
+  background-color: rgba(1, 43, 85, 0.2);
+}
+
+/*===========================  responsive style ===========================*/
+/*===========================  tab style ===========================*/
+@media (min-width: 600px) {
+  .container {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -moz-flex;
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex;
+    padding: 0 35px;
+  }
+  .navbar {
+    padding-right: 35px;
+    width: 30%;
+  }
+  .navbar .nav-head {
+    padding: 60px 0;
+  }
+  .navbar .nav-head .fa-solid {
+    display: none;
+  }
+  .navbar .nav-container {
+    display: block;
+  }
+  .navbar .nav-container .menu-item {
+    font-size: 1.6rem;
+  }
+  .navbar .nav-container .icons {
+    justify-content: flex-start;
+  }
+  .main {
+    width: 70%;
+  }
+  .main .footer {
+    padding: 35px 0 50px;
+  }
+  .projects .project-item {
+    width: 50%;
+    padding: 2px 0;
+  }
+  .projects .project-item:nth-child(even) {
+    padding-left: 4px;
+  }
+}
+/*===========================  desktop style ===========================*/
+@media (min-width: 900px) {
+  .container {
+    padding: 0 55px;
+  }
+  .navbar {
+    width: 25%;
+  }
+  .navbar .nav-head h2 {
+    font-size: 2.6rem;
+  }
+  .head {
+    font-size: 2.6rem;
+    padding: 120px;
+  }
+  .head .head-bottom-text {
+    font-size: 1.8rem;
+  }
+  .main {
+    width: 75%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
